@@ -26,7 +26,7 @@ const perguntas = [
     },
     {
         questao: "Eu sou alégico a:",
-        respostas: ["Glúten", "Nada, cabra macho", "Molusco"],
+        respostas: ["Glúten", "Nada, sou cabra macho", "Molusco"],
         certa: 1
     },
     {
@@ -35,14 +35,14 @@ const perguntas = [
         certa: 3
     },
     {
-        questao: "Eu sou alégico a:",
-        respostas: ["Glúten", "Nada, cabra macho", "Molusco"],
-        certa: 1
+        questao: "Qual é o nome do meu cachorro marrom?",
+        respostas: ["Bruce", "Linux", "Python"],
+        certa: 0
     },
     {
-        questao: "Eu sou alégico a:",
-        respostas: ["Glúten", "Nada, cabra macho", "Molusco"],
-        certa: 1
+        questao: "Qual é a melhor faculdade do ABC?",
+        respostas: ["Mauá", "UFABC", "USP", "FEI"],
+        certa: 3
     },
     {
         questao: "A quem pertence meu coração?",
