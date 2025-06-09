@@ -37,6 +37,7 @@ const perguntas = [
     {
         questao: "Qual é o nome do meu cachorro marrom?",
         respostas: ["Bruce", "Linux", "Python"],
+        img: "img/bruce.jpeg",
         certa: 0
     },
     {
@@ -70,7 +71,24 @@ function mostrarPergunta() {
     resultDiv.textContent = '';
     nextBtn.classList.add('hide');
     const atual = perguntas[indice];
-    questionDiv.textContent = atual.questao;
+    questionDiv.innerHTML = ""; // Limpa antes
+
+    // Se houver imagem, mostra antes do texto
+    if (atual.img) {
+        const img = document.createElement('img');
+        img.src = atual.img;
+        img.alt = "Imagem da pergunta";
+        img.style.maxWidth = "200px";
+        img.style.display = "block";
+        img.style.margin = "0 auto 16px auto";
+        questionDiv.appendChild(img);
+    }
+
+    // Mostra o texto da pergunta
+    const texto = document.createElement('div');
+    texto.textContent = atual.questao;
+    questionDiv.appendChild(texto);
+
     answersDiv.innerHTML = '';
     atual.respostas.forEach((resp, i) => {
         const btn = document.createElement('button');
@@ -106,16 +124,16 @@ function obterPremio(pontos) {
     let imagens = [];
     if (pontos === 100) {
         texto = "🏆 Parabéns! Você ganhou o prêmio máximo: Meu coração!";
-        imagens = ["img/foto1.jpg", "img/foto2.jpg", "img/foto3.jpg", "img/foto4.jpg"];
+        imagens = ["img/foto1.jpg", "img/foto2.jpg", "img/foto3.jpg", "img/foto4.jpg", "img/foto5.jpg", "img/foto6.jpg", "img/foto7.jpg", "img/foto8.jpg"];
     } else if (pontos >= 70) {
         texto = "🥈 Muito bem! Você ganhou um grande abraço!";
-        imagens = ["img/foto1.jpg", "img/foto2.jpg", "img/foto3.jpg"];
+        imagens = ["img/foto1.jpg", "img/foto2.jpg", "img/foto3.jpg", "img/foto4.jpg", "img/foto5.jpg"];
     } else if (pontos >= 40) {
         texto = "🥉 Você ganhou um sorriso!";
         imagens = ["img/foto1.jpg", "img/foto2.jpg"];
     } else {
         texto = "😅 Precisamos conversar...";
-        imagens = ["img/foto1.jpg"];
+        imagens = ["img/fotokk.jpg"];
     }
     return { texto, imagens };
 }
