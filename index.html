@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz do Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz do Amor</h1>
+        <div id="quiz">
+            <div id="question" class="question"></div>
+            <div id="answers" class="answers"></div>
+            <div id="result" class="result"></div>
+            <button id="nextBtn" class="hide">Próxima</button>
+        </div>
+        <div id="final" class="hide">
+            <h2>Quiz finalizado!</h2>
+            <p>Sua pontuação: <span id="finalScore"></span></p>
+            <div id="premioBox"></div>
+            <button onclick="location.reload()">Jogar novamente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
